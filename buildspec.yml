@@ -1,0 +1,42 @@
+version: 0.2
+
+run-as: Linux-user-name
+
+env:
+  variables:
+    key: "value"
+    key: "value"
+  parameter-store:
+    key: "value"
+    key: "value"
+  exported-variables:
+    - variable
+    - variable
+  secrets-manager:
+    key: secret-id:json-key:version-stage:version-id
+  git-credential-helper: no | yes
+
+proxy:
+  upload-artifacts: no | yes
+  logs: no | yes
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk8
+    commands:
+      - echo install
+  pre_build:
+    commands:
+      - echo pre_build
+  build:
+    commands:
+      - mvn package
+      - echo build
+  post_build:
+    commands:
+      - echo post_build
+      
+artifacts:
+  files:
+    - target/02-spring-boot-todo-rest-api-h2-aws-codepipeline-0.0.1-SNAPSHOT.jar
