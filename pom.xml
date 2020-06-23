@@ -8,7 +8,7 @@
 	<artifactId>02-todo-rest-api-h2</artifactId>
 	-->
 	<artifactId>02-spring-boot-todo-rest-api-h2-aws-codepipeline</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<description>Demo project for Spring Boot</description>
